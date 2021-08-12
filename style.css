@@ -79,7 +79,7 @@ nav {
 }
 .hero-text p {
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   width: 80%;
 }
@@ -112,14 +112,14 @@ section:first-child {
 }
 .interactive-text h2 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 300;
 }
 .interactive-text p {
   color: var(--Dark_Gray);
   font-family: "Alata", sans-serif;
-  font-size: 19px;
+  font-size: 15px;
   line-height: 2rem;
   margin: 20px 0;
 }
@@ -145,9 +145,6 @@ section:first-child {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: normal;
-}
-.desktop-btn {
-  display: none;
 }
 .box {
   position: relative;
@@ -227,6 +224,12 @@ section:first-child {
 }
 .button:hover a {
   color: white;
+}
+.desktop-btn {
+  display: none;
+}
+.mobile-btn {
+  margin: 30px 0;
 }
 footer {
   background-color: var(--Black);
