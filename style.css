@@ -22,6 +22,12 @@ header {
   justify-content: center;
   height: 100vh;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 nav {
   font-family: "Alata", sans-serif;
   display: flex;
@@ -31,20 +37,21 @@ nav {
 }
 .nav-mobile {
   background-color: black;
+  position: absolute;
   height: 100%;
 }
 .navbar {
   font-family: "Josefin Sans";
   display: none;
   flex-direction: column;
-  margin-top: 5em;
+  margin-top: 10em;
   position: absolute;
 }
 .open-menu {
   display: flex;
 }
 .navbar a {
-  color: white;
+  color: var(--White);
   display: inline-block;
   font-size: 1.5rem;
   text-decoration: none;
@@ -63,14 +70,18 @@ nav {
 }
 .hero-text {
   margin-top: 6rem;
-  padding: 0 20px;
+  border: 2px solid var(--White);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
 }
 .hero-text p {
-  border: 2px solid var(--White);
   color: white;
-  font-size: 3.2rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  padding: 20px;
+  width: 80%;
 }
 section {
   padding: 0 20px;
@@ -140,6 +151,8 @@ section:first-child {
 }
 .box {
   position: relative;
+  display: flex;
+  justify-content: center;
   margin: 10px 0;
   cursor: pointer;
   overflow: hidden;
@@ -257,15 +270,18 @@ footer {
 }
 .socials {
   padding-bottom: 15px;
+  display: flex;
+  align-items: flex-end;
 }
-.socials a {
+.socials div {
   padding: 0 10px;
+  cursor: pointer;
 }
-.socials a:hover::after {
+.socials div:hover:after {
   content: "";
   display: flex;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
   padding-top: 2px;
   border-bottom: 2px solid white;
 }
@@ -312,6 +328,7 @@ footer {
   .box p {
     left: 10px;
     font-size: 1.6rem;
+    width: 60%;
   }
   .box:hover p {
     transform: translateY(20px);
@@ -325,6 +342,7 @@ footer {
   .wrapper {
     width: 80%;
     padding: 3rem 0;
+    align-items: flex-start;
   }
   nav {
     justify-content: space-between;
@@ -362,7 +380,9 @@ footer {
   }
   .hero-text {
     width: 60%;
-    padding: 0;
+  }
+  .hero-text p {
+    font-size: 3.2rem;
   }
   .interactive-wrapper {
     flex-direction: row;
@@ -399,7 +419,7 @@ footer {
     display: block;
   }
   .box p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .footer-wrapper {
     flex-direction: row;
@@ -430,7 +450,7 @@ footer {
   .socials {
     padding: 0;
   }
-  .socials a {
+  .socials div {
     padding: 0;
     padding-left: 15px;
   }
@@ -441,6 +461,10 @@ footer {
 @media (min-width: 1160px) {
   .hero-text {
     width: 50%;
+    padding: 2rem;
+  }
+  .hero-text p {
+    width: 90%;
   }
   section {
     display: flex;
@@ -475,5 +499,9 @@ footer {
   .interactive-text p {
     font-size: 15px;
     width: 80%;
+  }
+  .box p {
+    left: 20%;
+    font-size: 2rem;
   }
 }
